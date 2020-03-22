@@ -11,6 +11,8 @@
 
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
+<link rel="stylesheet" type="text/css" href="">
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
         <!-- TODO: Se passer de FontAwesome. -->
         <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
@@ -767,3 +769,6 @@ var d=new Date();
 </script>
   </body>
 </html>
+
+
+

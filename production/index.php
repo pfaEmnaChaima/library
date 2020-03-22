@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="images/favicon.ico" type="image/ico" />
+    <link href="css/font-awesome.min.css" rel="stylesheet">
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
         <!-- TODO: Se passer de FontAwesome. -->
@@ -312,444 +313,8 @@
               <div class="count" id="liv_emp"></div>
                 <button type="button" class="btn btn-success btn-xs"><a href="livre_emprunte.php" style="color: white;">Add</a><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="padding-left: 10px;"></span></button>
             </div>
-             </div> <div class="col-md-12" id="calendrier">
- <div class="x_panel" style="">
-
-    <div class="x_title">
-
-        <h2>  <span class="glyphicon glyphicon-time" aria-hidden="true"style="padding-right: 10px;"></span>Horaires</h2>
-        <ul class="nav navbar-right panel_toolbox">
-          <button type="button" class="btn btn-info" data-toggle="modal" data-target=".bs-example-modal-lg" > modifier<span class="glyphicon glyphicon-pencil" aria-hidden="true"style="padding-left: 10px;"></span>
-</button>
-            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Settings 1</a>
-                    </li>
-                    <li><a href="#">Settings 2</a>
-                    </li>
-                </ul>
-            </li>
-            <li><a class="close-link"><i class="fa fa-close"></i></a>
-            </li>
-        </ul>
-        <div class="clearfix"></div>
-    </div>
-    <div class="x_content">
-  
-        <div class="container">
-            <div class="row">
-
-      
-           
-              
-          
-        
-        <style>
-          
-            
-            th {
-                width: 40px !important;
-                padding-left: 0px !important;
-                padding-right: 0px !important;
-
-            }
-            .table td,
-            {padding: 0px !important;
-              height: 10px !important;
-
-            }
-        </style>
-           <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
-                    <div class="modal-dialog modal-lg">
-                      <div class="modal-content">
-
-                        <div class="modal-header">
-                         
-                          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
-                          </button>
-                        </div>
-
-                        <div class="modal-body">
-                       <div class="col-sm-4" >
-                  <input type="text" name="" id="jour">
-                </div><div class="col-sm-4">
-                   <input type="time" name="" id="debut">
-                </div>
-                
-                 <div class="col-sm-4">
-                    <input type="time" name="" id="fin">
-                </div>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-success" onclick="add()">Save changes</button>
-                        </div>
-
-                      </div>
-                    </div>
-                  </div>
-        <section class="section">
-            <nav class="level">
-                <div class="level-item">
-                    <div class="field has-addons">
-                        <p class="control">
-                            <a class="button">
-                                <span class="icon"><i class="fas fa-chevron-left"></i></span>
-                            </a>
-                        </p>
-                        <p class="control">
-                            <a class="button">
-                                Semaine du 04/03 au 10/03
-                            </a>
-                        </p>
-                        <p class="control">
-                            <a class="button">
-                                <span class="icon"><i class="fas fa-chevron-right"></i></span>
-                            </a>
-                        </p>
-                    </div>
-
-                </div>
-            </nav>
-            
-            <table class="table" style="overflow-x: auto; display: block;">
-                <thead>
-                    <tr>
-                        <th></th>
-                            <th class="th_hour">08:00</th>
-                            <th ></th>
-                            <th ></th>
-                            <th ></th>
-                            <th class="th_hour">09:00</th>
-                            <th ></th>
-                            <th ></th>
-                            <th ></th>
-                            <th class="th_hour">10:00</th>
-                            <th ></th>
-                            <th ></th>
-                            <th ></th>
-                            <th class="th_hour">11:00</th>
-                            <th ></th>
-                            <th ></th>
-                            <th ></th>
-                            <th class="th_hour">12:00</th>
-                            <th ></th>
-                            <th ></th>
-                            <th ></th>
-                            <th class="th_hour">13:00</th>
-                            <th ></th>
-                            <th ></th>
-                            <th ></th>
-                            <th class="th_hour">14:00</th>
-                            <th ></th>
-                            <th ></th>
-                            <th ></th>
-                            <th class="th_hour">15:00</th>
-                            <th ></th>
-                            <th ></th>
-                            <th ></th>
-                            <th class="th_hour">16:00</th>
-                            <th ></th>
-                            <th ></th>
-                            <th ></th>
-                            <th class="th_hour">17:00</th>
-                            <th ></th>
-                            <th ></th>
-                            <th ></th>
-                            <th class="th_hour">18:00</th>
-                            <th ></th>
-                            <th ></th>
-                            <th ></th>
-                            <th class="th_hour">19:00</th>
-                            <th ></th>
-                            <th ></th>
-                            <th ></th>
-                            <th class="th_hour">20:00</th>
-                            <th ></th>
-                            <th ></th>
-                            <th ></th>
-                            <th class="th_hour">21:00</th><th ></th>
-                            <th ></th>
-                            <th ></th>
-                            <th class="th_hour">22:00</th><th ></th>
-                            <th ></th>
-                            <th ></th>
-                            <th class="th_hour">23:00</th><th ></th>
-                            <th ></th>
-                            <th ></th>
-                            <th class="th_hour">24:00</th>
-                        
-                    </tr>
-                </thead>
-                <tbody id="table_body">
-                </tbody>
-            </table>
-           <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-       <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase.js"></script>
-
-      <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-database.js"></script>
-
-      <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-              apiKey: "AIzaSyBiUHy07aEruI_ZgBmg-A8ez6bBc-W1gtw",
-              authDomain: "smart-library1.firebaseapp.com",
-              databaseURL: "https://smart-library1.firebaseio.com",
-              projectId: "smart-library1",
-              storageBucket: "smart-library1.appspot.com",
-              messagingSenderId: "215824460430",
-              appId: "1:215824460430:web:6d9b13ab3c7629b377b7df",
-              measurementId: "G-BC9C4EV24W"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        
-        function reload_page(){
-   window.location.reload();
-  }
- var nb_etud=firebase.database().ref('biblio/').child("nb_etud");
-      nb_etud.on('value', function(sna) {
-              var etat_dispo = sna.val();  
-              $("#nb_etud").append("<div>"+ etat_dispo+"</div>");
-            }); 
-
-   var nb_ch=firebase.database().ref('biblio/').child("nb_chaise");
-      nb_ch.on('value', function(sna) {
-              var etat_dispo = sna.val();  
-              $("#nb_chaises").append("<div>"+ etat_dispo+"</div>");
-            });
-
-       var doc=firebase.database().ref('biblio/').child("document");
-      doc.on('value', function(sna) {
-              var etat_dispo = sna.val();  
-              $("#document").append("<div>"+ etat_dispo+"</div>");
-            });
-
-       var liv_emp=firebase.database().ref('biblio/').child("liv_emp");
-      liv_emp.on('value', function(sna) {
-              var etat_dispo = sna.val();  
-              $("#liv_emp").append("<div>"+ etat_dispo+"</div>");
-            });
-
-      var temp=firebase.database().ref('biblio/').child("temp");
-      temp.on('value', function(sna) {
-              var etat_dispo = sna.val();  
-              $("#temp").append("<h3>"+ etat_dispo+" °"+"</h3>");
-            });
-          </script>
-  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-  <script src="js/horaire.js"></script>
-        </section></div></div></div></div>
-             <div class="col-md-12" id="etat">
-             	  <div class="col-md-4">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Places disponibles</h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu" x-placement="bottom-start" style="position will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 30px, 0px);">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content" style="display: block;">
-                   
-                    
-                      <input class="knob" data-width="200" data-height="200" data-displayPrevious=true data-fgColor="#26B99A" data-skin="tron" data-thickness=".2" value="20">
-                    </div>
-                   
-                    
-                    
-                  </div>
-                </div>
-            
-                 <div class="col-md-4 ">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Nombre etudiants existants </h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu" x-placement="bottom-start" style="position will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 30px, 0px);">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content" style="display: block;">
-                    
-                     
-                       <input class="knob" data-width="200" data-height="200" data-angleOffset=-125 data-angleArc=250 data-fgColor="#e01a1a" data-rotation="anticlockwise" value="80">
-                 
-
-                    
-                   
-                    
-                    
-                  </div>
-                </div>
-              </div>
-                <!-- start of weather widget -->
-                <div class="col-md-4 col-sm-4 ">
-                  <div class="x_panel">
-                    <div class="x_title">
-                      <h2>Temperature</h2>
-                      <ul class="nav navbar-right panel_toolbox">
-                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                        </li>
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="#">Settings 1</a>
-                              <a class="dropdown-item" href="#">Settings 2</a>
-                            </div>
-                        </li>
-                        <li><a class="close-link"><i class="fa fa-close"></i></a>
-                        </li>
-                      </ul>
-                      <div class="clearfix"></div>
-                    </div>
-                    <div class="x_content">
-                      
-                      <div class="col-sm-12">
-                        <div class="weather-text pull-right">
-                          <h3  id="temp"></h3>
-                        </div>
-                      </div>
-
-                     
-                      </div>
-                    </div>
-                  </div>
-
-                
-                <!-- end of weather widget -->
-</div>
-<div class="col-md-6 col-sm-5 ">
-              <div class="x_panel tile">
-                <div class="x_title">
-                  <h2>Satisfaction des etudiants</h2>
-                  <ul class="nav navbar-right panel_toolbox">
-                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                      
-                    </li>
-                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                    </li>
-                  </ul>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-                  <table class="" style="width:100%">
-                    <tr>
-                      <th style="width:50%;">
-                        <p></p>
-                      </th>
-                      <th>
-                        <div class="col-lg-7 col-md-7 col-sm-7 ">
-                          <p class=""></p>
-                        </div>
-                        <div class="col-lg-5 col-md-5 col-sm-5 ">
-                          <p class=""></p>
-                        </div>
-                      </th>
-                    </tr>
-                    <tr>
-                      <td>
-                        <canvas class="canvasDoughnut" height="140" width="140" style="margin: 15px 10px 10px 0"></canvas>
-                      </td>
-                      <td>
-                        <table class="tile_info">
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square blue"></i>80%-100% </p>
-                            </td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square green"></i>60%-80% </p>
-                            </td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square purple"></i>40%-60% </p>
-                            </td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square aero"></i>20%-40% </p>
-                            </td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square red"></i>0%-20% </p>
-                            </td>
-                            <td></td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-            </div>
-
-<div class="row">
-            <div class="col-md-12 col-sm-12 ">
-              <div class="dashboard_graph">
-
-                <div class="row x_title">
-                  <div class="col-md-6">
-                    <h3>Nombre de visites <small>a la bibliotheque</small></h3>
-                  </div>
-                  <div class="col-md-6">
-                    <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
-                      <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
-                      <span>December 30, 2014 - January 28, 2015</span> <b class="caret"></b>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-9 col-sm-9 ">
-                  <div id="chart_plot_01" class="demo-placeholder"></div>
-                </div>
-               
-
-                <div class="clearfix"></div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-md-12" id="calendrier">
+             </div>
+              <div class="col-md-12" id="calendrier">
  <div class="x_panel" style="">
 
     <div class="x_title">
@@ -955,7 +520,28 @@
 
         <button type="button"  data-dismiss="modal" class="btn btn-success" onclick="addh()">Add</button>
        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-       
+       <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase.js"></script>
+
+      <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-database.js"></script>
+
+      <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+              apiKey: "AIzaSyBiUHy07aEruI_ZgBmg-A8ez6bBc-W1gtw",
+              authDomain: "smart-library1.firebaseapp.com",
+              databaseURL: "https://smart-library1.firebaseio.com",
+              projectId: "smart-library1",
+              storageBucket: "smart-library1.appspot.com",
+              messagingSenderId: "215824460430",
+              appId: "1:215824460430:web:6d9b13ab3c7629b377b7df",
+              measurementId: "G-BC9C4EV24W"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        
+
+
+</script>
   <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
   <script src="js/horaire.js"></script>
       </div>
@@ -968,6 +554,266 @@
                       <tbody id="table_body">
                      </tbody>
                     </table></div></div>
+           <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+       <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase.js"></script>
+
+      <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-database.js"></script>
+
+      <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+              apiKey: "AIzaSyBiUHy07aEruI_ZgBmg-A8ez6bBc-W1gtw",
+              authDomain: "smart-library1.firebaseapp.com",
+              databaseURL: "https://smart-library1.firebaseio.com",
+              projectId: "smart-library1",
+              storageBucket: "smart-library1.appspot.com",
+              messagingSenderId: "215824460430",
+              appId: "1:215824460430:web:6d9b13ab3c7629b377b7df",
+              measurementId: "G-BC9C4EV24W"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        
+        function reload_page(){
+   window.location.reload();
+  }
+ var nb_etud=firebase.database().ref('biblio/').child("nb_etud");
+      nb_etud.on('value', function(sna) {
+              var etat_dispo = sna.val();  
+              $("#nb_etud").append("<div>"+ etat_dispo+"</div>");
+            }); 
+
+   var nb_ch=firebase.database().ref('biblio/').child("nb_chaise");
+      nb_ch.on('value', function(sna) {
+              var etat_dispo = sna.val();  
+              $("#nb_chaises").append("<div>"+ etat_dispo+"</div>");
+            });
+
+       var doc=firebase.database().ref('biblio/').child("document");
+      doc.on('value', function(sna) {
+              var etat_dispo = sna.val();  
+              $("#document").append("<div>"+ etat_dispo+"</div>");
+            });
+
+       var liv_emp=firebase.database().ref('biblio/').child("liv_emp");
+      liv_emp.on('value', function(sna) {
+              var etat_dispo = sna.val();  
+              $("#liv_emp").append("<div>"+ etat_dispo+"</div>");
+            });
+
+      var temp=firebase.database().ref('biblio/').child("temp");
+      temp.on('value', function(sna) {
+              var etat_dispo = sna.val();  
+              $("#temp").append("<h3>"+ etat_dispo+" °"+"</h3>");
+            });
+          </script>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script src="js/horaire.js"></script>
+             <div class="col-md-12" id="etat">
+             	  <div class="col-md-4">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Places disponibles</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu" x-placement="bottom-start" style="position will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 30px, 0px);">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content" style="display: block;">
+                   
+                    
+                      <input class="knob" data-width="200" data-height="200" data-displayPrevious=true data-fgColor="#26B99A" data-skin="tron" data-thickness=".2" value="20">
+                    </div>
+                   
+                    
+                    
+                  </div>
+                </div>
+            
+                 <div class="col-md-4 ">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Nombre etudiants existants </h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu" x-placement="bottom-start" style="position will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 30px, 0px);">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content" style="display: block;">
+                    
+                     
+                       <input class="knob" data-width="200" data-height="200" data-angleOffset=-125 data-angleArc=250 data-fgColor="#e01a1a" data-rotation="anticlockwise" value="80">
+                 
+
+                    
+                   
+                    
+                    
+                  </div>
+                </div>
+              </div>
+                <!-- start of weather widget -->
+                <div class="col-md-4 col-sm-4 ">
+                  <div class="x_panel">
+                    <div class="x_title">
+                      <h2>Temperature</h2>
+                      <ul class="nav navbar-right panel_toolbox">
+                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item" href="#">Settings 1</a>
+                              <a class="dropdown-item" href="#">Settings 2</a>
+                            </div>
+                        </li>
+                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+                        </li>
+                      </ul>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                      
+                      <div class="col-sm-12">
+                        <div class="weather-text pull-right">
+                          <h3  id="temp"></h3>
+                        </div>
+                      </div>
+
+                     
+                      </div>
+                    </div>
+                  </div>
+
+                
+                <!-- end of weather widget -->
+</div>
+<div class="col-md-6 col-sm-5 ">
+              <div class="x_panel tile">
+                <div class="x_title">
+                  <h2>Satisfaction des etudiants</h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <table class="" style="width:100%">
+                    <tr>
+                      <th style="width:50%;">
+                        <p></p>
+                      </th>
+                      <th>
+                        <div class="col-lg-7 col-md-7 col-sm-7 ">
+                          <p class=""></p>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-5 ">
+                          <p class=""></p>
+                        </div>
+                      </th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <canvas class="canvasDoughnut" height="140" width="140" style="margin: 15px 10px 10px 0"></canvas>
+                      </td>
+                      <td>
+                        <table class="tile_info">
+                          <tr>
+                            <td>
+                              <p><i class="fa fa-square blue"></i>80%-100% </p>
+                            </td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p><i class="fa fa-square green"></i>60%-80% </p>
+                            </td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p><i class="fa fa-square purple"></i>40%-60% </p>
+                            </td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p><i class="fa fa-square aero"></i>20%-40% </p>
+                            </td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p><i class="fa fa-square red"></i>0%-20% </p>
+                            </td>
+                            <td></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+<div class="row">
+            <div class="col-md-12 col-sm-12 ">
+              <div class="dashboard_graph">
+
+                <div class="row x_title">
+                  <div class="col-md-6">
+                    <h3>Nombre de visites <small>a la bibliotheque</small></h3>
+                  </div>
+                  <div class="col-md-6">
+                    <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
+                      <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                      <span>December 30, 2014 - January 28, 2015</span> <b class="caret"></b>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-9 col-sm-9 ">
+                  <div id="chart_plot_01" class="demo-placeholder"></div>
+                </div>
+               
+
+                <div class="clearfix"></div>
+              </div>
+            </div>
+
+          </div>
        
          <div class="col-md-12">
       <div class="x_panel">
