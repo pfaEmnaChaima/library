@@ -8,12 +8,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="images/favicon.ico" type="image/ico" />
-<link rel="stylesheet" type="text/css" href="">
-  
+          <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
         <!-- TODO: Se passer de FontAwesome. -->
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <title>Smart Library </title>
 
     <!-- Bootstrap -->
@@ -97,6 +96,27 @@
                       <li><a href="index3.html">Dashboard3</a></li>
                     </ul>
                   </li>
+  <li><a><i class="fa fa-edit"></i> Bibliotheque <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a><strong>Salle de Lecture</strong> <i class="fa fa-plus"></i></a>
+                      <ul id="fct" class="nav child_menu">
+                      <li><a href="index.php#etat">Etat</a></li>
+                      <li><a href="index.php#calendrier">Regles</a></li>
+
+                    </ul>
+                  </li>
+                      <li><a><strong>Librairie</strong> <i class="fa fa-plus"></i></a>
+                      <ul id="fct" class="nav child_menu">
+                      <li><a href="document.php">Documents</a></li>
+                      <li><a href="livre_emprunte.php">Empruntes</a></li>
+
+                 
+                    </ul>
+                  </li>
+                      
+                    </ul>
+                  </li>
+
                   <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="form.html">General Form</a></li>
@@ -193,69 +213,16 @@
                   </div>
                 </li>
 
-                <li role="presentation" class="nav-item dropdown open">
+                     <li role="presentation" class="nav-item dropdown open">
                   <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown" aria-expanded="false">
-                    <i class="fa fa-envelope-o"></i>
-                    <span class="badge bg-green">6</span>
+                    <i class="fa big-icon fa-envelope icon-wrap" ></i>
+                    <span  id="number_msg" > </span>
                   </a>
-                  <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
-                    <li class="nav-item">
-                      <a class="dropdown-item">
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="dropdown-item">
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="dropdown-item">
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="dropdown-item">
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <div class="text-center">
-                        <a class="dropdown-item">
-                          <strong>See All Alerts</strong>
-                          <i class="fa fa-angle-right"></i>
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
+                  <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1" id="ida">   
+                  <li>
+                    
+                  </li>   
+                </ul>
                 </li>
               </ul>
             </nav>
@@ -268,47 +235,42 @@
           <!-- top tiles -->
           <div class="row" style="display: inline-block;" >
           <div class="tile_count"style="width: 1200px;">
-            <div class="col-md-3 col-sm-3  tile_stats_count" style="padding-left: 50px padding-right: 50px;">
-              <span class="count_top"><i class="fa fa-user"style="padding-right: 10px;"></i>Nombre d'etudiants </span>
+<div class="col-md-3 col-sm-5  tile_stats_count" style="padding-left: 50px padding-right: 50px;">
+              <span class="count_top"><i class="fa fa-user" aria-hidden="true" style="margin-right: 5px;"></i>Nombre d'etudiants </span>
               <div class="count" id="nb_etud"></div>
                 <button type="button" class="btn btn-success btn-xs"><a href="contacts.html" style="color: white;">modifier</a><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="padding-left: 10px;"></span></button>
             </div>
             
             
            
-            <div class="col-md-3 col-sm-3 tile_stats_count" style="padding-left: 50px padding-right: 50px;">
-              <span class="count_top"><i class="fa fa-books"style="padding-right: 10px;"></i> Nombre de chaises</span>
+            <div class="col-md-3 col-sm-3  tile_stats_count" style="padding-left: 50px padding-right: 50px;">
+              <span class="count_top"><i class="fas fa-chair"  style="margin-right: 3px;"></i> Nombre de chaises</span>
               <div class="count" id="nb_chaises"></div>
- <button type="button" class="btn btn-info">modifier<span class="glyphicon glyphicon-pencil" aria-hidden="true"style="padding-left: 10px;"></span></button>
+              <button type="button" class="btn btn-info">modifier<span class="glyphicon glyphicon-pencil" aria-hidden="true"style="padding-left: 10px;"></span></button>
               
             </div>
-             <div class="col-md-3 col-sm-3 tile_stats_count" style="padding-left: 50px padding-right: 50px;">
-              <span class="count_top"><i class="fa fa-book"style="padding-right: 10px;"></i>Documents </span>
+             <div class="col-md-3 col-sm-3  tile_stats_count" style="padding-left: 50px padding-right: 50px;">
+              <span class="count_top"><i class="fa fa-book"style="margin-right: 5px;" ></i>Documents </span>
               <div class="count" id="document"></div>
                 <button type="button" class="btn btn-success btn-xs"><a href="document.php" style="color: white;">plus d'infos</a><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="padding-left: 10px;"></span></button>
             </div>
-              <div class="col-md-3 col-sm-3  tile_stats_count" style="padding-left: 50px padding-right: 50px;">
-              <span class="count_top"><i class="fa fa-books"style="padding-right: 10px;"></i>Livre Emprunte </span>
+
+            <div class="col-md-3 col-sm-3  tile_stats_count" style="padding-left: 50px padding-right: 50px;">
+              <span class="count_top"><i class="fa fa-book"style="margin-right: 5px;"></i>Livre Emprunte </span>
               <div class="count" id="liv_emp"></div>
-                <button type="button" class="btn btn-success btn-xs"><a href="livre_emprunte.php" style="color: white;">Add</a><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="padding-left: 10px;"></span></button>
+                <button type="button" class="btn btn-info"><a href="livre_emprunte.php" style="color: white;">Add</a><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="padding-left: 10px;"></span></button>
             </div>
              </div>
           </div>
         <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2><i  style="padding-right: 20px;"></i>Documents<small>Stockage </small></h2>
+                    <h2><i class="fa fa-book"  style="margin-right: 20px;"></i>Documents<small>Stockage </small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Settings 1</a>
-                            <a class="dropdown-item" href="#">Settings 2</a>
-                          </div>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                   
+              <li><a class="close-link" style="margin-left: 15px"><i class="fa fa-times" ></i></a>
                       </li>
                     </ul>
                     <div class="clearfix"></div>
@@ -322,7 +284,7 @@
                                         <div class="row">
                   <div class="col-sm-6">
                     <div class="mb-md">
-                      <button type="button" id="add_button" data-toggle="modal" data-target="#userModal" class="btn btn-info btn-lg">Ajouter<i class="fa fa-plus" style="padding-left: 20px;"></i></button>
+                      <button type="button" id="add_button" data-toggle="modal" data-target="#userModal" class="btn btn-info btn-lg">Ajouter<i class="fa fa-plus" style="margin-left: 20px;"></i></button>
                     </div>
                   </div>
                 </div>
@@ -419,10 +381,37 @@
               $("#liv_emp").append("<div>"+ etat_dispo+"</div>");
             });
 
+  var test=firebase.database().ref().child("emprunte");
+  test.on("value", function(snapshot){
+          var nb=0;
+          var t=firebase.database().ref().child("emprunte");
+          t.on("child_added",snap => {
+             var id_emprunte=snap.child("emp_id").val();
+             var date=snap.child("date_retour").val();
+             var etat=snap.child("etat").val();
+             var d=new Date();
+             var j=d.getDate(); var m=d.getMonth()+1; 
+             if (j < 10) { 
+                 j = '0' + j; 
+                          } 
+                if (m < 10) { 
+                 m = '0' + m; 
+                  } 
+             var d1 = j+'/'+m+'/'+ d.getFullYear();
+            if ((date<d1)&&(etat=="notReturned")) {
+                  nb=nb+1;
+        $("#ida").append("<li class=\"nav-item\"><a class=\"dropdown-item\"> <span class=\"image\"><img src=\"images/img.jpg\" alt=\"Profile Image\" /></span><span>John Smith</span><span class=\"message\" >L'emprunte d'ID :  "+ id_emprunte +  "  a dépassé la date de retour</span></a></li>");
+ }
+    
+});
+      
+             $("#number_msg").append("<span class=\"badge bg-green\">" + nb + "</span>");
+
+})
      
           </script>
   <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-  <script src="js/doc.js"></script>
+  <script src="js/docu.js"></script>
       </div>
        </div></form>
      </div>

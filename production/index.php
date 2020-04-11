@@ -7,13 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="images/favicon.ico" type="image/ico" />
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-        
+      <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
         <!-- TODO: Se passer de FontAwesome. -->
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <title>Smart Library </title>
-<link rel="stylesheet" type="text/css" href="css/sidebarcss.css">
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -39,6 +37,8 @@
     <link href="../vendors/normalize-css/normalize.css" rel="stylesheet">
     <link href="../vendors/ion.rangeSlider/css/ion.rangeSlider.css" rel="stylesheet">
     <link href="../vendors/ion.rangeSlider/css/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+      <!-- Switchery -->
+    <link href="../vendors/switchery/dist/switchery.min.css" rel="stylesheet">
     <!-- Bootstrap Colorpicker -->
     <link href="../vendors/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css" rel="stylesheet">
     <!-- bootstrap-progressbar -->
@@ -56,6 +56,7 @@
   html {
   scroll-behavior: smooth;
 }
+
 </style>
 
   </head>
@@ -66,7 +67,7 @@
         <div class="col-md-3 left_col menu_fixed mCustomScrollbar _mCS_1 mCS-autoHide" style="overflow: visible;">
           <div class="left_col">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.php" class="site_title"><i class="fa fa-paw"></i> <span>Smart Libray </span></a>
+              <a href=" php" class="site_title"><i class="fa fa-paw"></i> <span>Smart Libray </span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -215,67 +216,14 @@
 
                 <li role="presentation" class="nav-item dropdown open">
                   <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown" aria-expanded="false">
-                    <i class="fa big-icon fa-envelope icon-wrap"></i>
-                    <span class="badge bg-green">6</span>
+                    <i class="fa big-icon fa-envelope icon-wrap" ></i>
+                    <span  id="number_msg" > </span>
                   </a>
-                  <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
-                    <li class="nav-item">
-                      <a class="dropdown-item">
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="dropdown-item">
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="dropdown-item">
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="dropdown-item">
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <div class="text-center">
-                        <a class="dropdown-item">
-                          <strong>See All Alerts</strong>
-                          <i class="fa fa-angle-right"></i>
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
+                  <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1" id="ida">   
+                  <li>
+                    
+                  </li>   
+                </ul>
                 </li>
               </ul>
             </nav>
@@ -286,10 +234,10 @@
         <!-- page content -->
         <div class="right_col" role="main">
           <!-- top tiles -->
-          <div class="row" style="display: inline-block;" >
+                <div class="row" style="display: inline-block;" >
           <div class="tile_count"style="width: 1200px;">
             <div class="col-md-3 col-sm-5  tile_stats_count" style="padding-left: 50px padding-right: 50px;">
-              <span class="count_top"><i class="fa fa-user" aria-hidden="true" style="margin-right: 10px;"></i>Nombre d'etudiants </span>
+              <span class="count_top"><i class="fa fa-user" aria-hidden="true" style="margin-right: 5px;"></i>Nombre d'etudiants </span>
               <div class="count" id="nb_etud"></div>
                 <button type="button" class="btn btn-success btn-xs"><a href="contacts.html" style="color: white;">modifier</a><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="padding-left: 10px;"></span></button>
             </div>
@@ -297,21 +245,21 @@
             
            
             <div class="col-md-3 col-sm-3  tile_stats_count" style="padding-left: 50px padding-right: 50px;">
-              <span class="count_top"><i class="fas fa-chair"  style="margin-right: 10px;"></i> Nombre de chaises</span>
+              <span class="count_top"><i class="fas fa-chair"  style="margin-right: 3px;"></i> Nombre de chaises</span>
               <div class="count" id="nb_chaises"></div>
               <button type="button" class="btn btn-info">modifier<span class="glyphicon glyphicon-pencil" aria-hidden="true"style="padding-left: 10px;"></span></button>
               
             </div>
              <div class="col-md-3 col-sm-3  tile_stats_count" style="padding-left: 50px padding-right: 50px;">
-              <span class="count_top"><i class="fa fa-books"style="margin-right: 10px;" ></i>Documents </span>
+              <span class="count_top"><i class="fa fa-book"style="margin-right: 5px;" ></i>Documents </span>
               <div class="count" id="document"></div>
                 <button type="button" class="btn btn-success btn-xs"><a href="document.php" style="color: white;">plus d'infos</a><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="padding-left: 10px;"></span></button>
             </div>
 
             <div class="col-md-3 col-sm-3  tile_stats_count" style="padding-left: 50px padding-right: 50px;">
-              <span class="count_top"><i class="fa fa-books"style="padding-right: 10px;"></i>Livre Emprunte </span>
+              <span class="count_top"><i class="fa fa-book"style="margin-right: 5px;"></i>Livre Emprunte </span>
               <div class="count" id="liv_emp"></div>
-                <button type="button" class="btn btn-success btn-xs"><a href="livre_emprunte.php" style="color: white;">Add</a><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="padding-left: 10px;"></span></button>
+                <button type="button" class="btn btn-info"><a href="livre_emprunte.php" style="color: white;">Add</a><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="padding-left: 10px;"></span></button>
             </div>
              </div>
               <div class="col-md-12" id="calendrier">
@@ -349,17 +297,10 @@
           <button type="button" id="add_button" data-toggle="modal" data-target="#userModal" class="btn btn-info ">modifier<span class="glyphicon glyphicon-pencil" aria-hidden="true"style="padding-left: 10px;"></span></button>
             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
             </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Settings 1</a>
-                    </li>
-                    <li><a href="#">Settings 2</a>
-                    </li>
-                </ul>
-            </li>
-            <li><a class="close-link"><i class="fa fa-close"></i></a>
-            </li>
+          
+          <li><a class="close-link" style="margin-left: 15px">
+              <i class="fa fa-times" ></i></a>           
+                     </li>
         </ul>
         <div class="clearfix"></div>
     </div>
@@ -367,120 +308,7 @@
   
         <div class="container">
             <div class="row">
-
-      
-          <!-- <table >
-              
-          
- 
-        
-           
-        <section class="section">
-            <nav class="level">
-                <div class="level-item">
-                    <div class="field has-addons">
-                        <p class="control">
-                            <a class="button">
-                                <span class="icon"><i class="fas fa-chevron-left"></i></span>
-                            </a>
-                        </p>
-                        <p class="control">
-                            <a class="button">
-                                Semaine du 04/03 au 10/03
-                            </a>
-                        </p>
-                        <p class="control">
-                            <a class="button">
-                                <span class="icon"><i class="fas fa-chevron-right"></i></span>
-                            </a>
-                        </p>
-                    </div>
-
-                </div>
-            </nav>
-              <table id="datatable-buttons" class="table table-striped table-bordered dataTable no-footer dtr-inline" style="width: 100%;" role="grid" aria-describedby="datatable-buttons_info">
-                                        <div class="row">
-                  <div class="col-sm-6">
-                    <div class="mb-md">
-                      <button type="button" id="add_button" data-toggle="modal" data-target="#userModal" class="btn btn-info btn-lg">Ajouter<i class="fa fa-plus" style="padding-left: 20px;"></i></button>
-                    </div>
-                  </div>
-                </div>
-                <div id="userModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                     <div class="modal-dialog" role="document">
-       <form method="post" id="user_form" enctype="multipart/form-data">
-                      <div class="modal-content">
-
-                        <div class="modal-header">
-                             <h4 class="modal-title" id="myModalLabel" >Changer horaires</h4>
-
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
-
-                        <div class="modal-body">
-                       <div class="col-sm-4" >
-                  <input type="text" name="" id="jour">
-                </div><div class="col-sm-4">
-                   <input type="time" name="" id="debut">
-                </div>
-                
-                 <div class="col-sm-4">
-                    <input type="time" name="" id="fin">
-                </div>
-                        </div>
-                        <div class="modal-footer">
-                             <input type="hidden" name="jour" id="jour" />
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="button"data-dismiss="modal" class="btn btn-success" onclick="addh()">Save changes</button>
-                        </div>
-<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase.js"></script>
-
-      <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-database.js"></script>
-
-      <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-              apiKey: "AIzaSyBiUHy07aEruI_ZgBmg-A8ez6bBc-W1gtw",
-              authDomain: "smart-library1.firebaseapp.com",
-              databaseURL: "https://smart-library1.firebaseio.com",
-              projectId: "smart-library1",
-              storageBucket: "smart-library1.appspot.com",
-              messagingSenderId: "215824460430",
-              appId: "1:215824460430:web:6d9b13ab3c7629b377b7df",
-              measurementId: "G-BC9C4EV24W"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        
-
-
-</script>
-  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-  <script src="js/horaire.js"></script>
-                      </div>
-                    </div>
-                  </div>
-   
-    
-      
-       
-     </form>
-     </div>
-      </div>
-                           
-                    
-          
-                <thead>
-               
-                       <tr><th>jour</th><th>heure debut </th><th>heure fin</th></tr> 
-                    
-                </thead>
-              
-                <tbody id="t_body">
-                </tbody>
-            
-             
-        </section></div></div></table>--><table  class="table table-striped table-bordered dataTable no-footer dtr-inline" style="width: 100%;" role="grid" aria-describedby="datatable-buttons_info">
+<table  class="table table-striped table-bordered dataTable no-footer dtr-inline"  role="grid" aria-describedby="datatable-buttons_info">
                                        
     <div id="userModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
      <div class="modal-dialog" role="document">
@@ -505,14 +333,14 @@
         <option>Vendredi</option>
         <option>Samedi</option>
         <option>Dimanche</option>
-    </select>
+       </select>
        <label>Debut AM</label>
        <input type="time" name="debut" id="debut" class="form-control"  />
         <br />
         <label>Fin PM</label>
         <input type="time" name="fin" id="fin" class="form-control"  />
         <br />
-      </div>
+        </div>
       <div class="modal-footer">
        <input type="hidden" name="jour" id="jour" />
    
@@ -520,30 +348,8 @@
 
         <button type="button"  data-dismiss="modal" class="btn btn-success" onclick="addh()">Add</button>
        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-       <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase.js"></script>
-
-      <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-database.js"></script>
-
-      <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-              apiKey: "AIzaSyBiUHy07aEruI_ZgBmg-A8ez6bBc-W1gtw",
-              authDomain: "smart-library1.firebaseapp.com",
-              databaseURL: "https://smart-library1.firebaseio.com",
-              projectId: "smart-library1",
-              storageBucket: "smart-library1.appspot.com",
-              messagingSenderId: "215824460430",
-              appId: "1:215824460430:web:6d9b13ab3c7629b377b7df",
-              measurementId: "G-BC9C4EV24W"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        
-
-
-</script>
+       
   <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-  <script src="js/horaire.js"></script>
       </div>
        </div></form>
      </div>
@@ -553,7 +359,8 @@
                       </thead>
                       <tbody id="table_body">
                      </tbody>
-                    </table></div></div>
+                    </table></div></div></div></div>
+                    
            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase.js"></script>
@@ -574,6 +381,29 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
+
+        var rootRef=firebase.database().ref().child("horaires");
+
+   rootRef.orderByChild("id").on("child_added",snap => {
+  var jour=snap.child("jour").val();
+  var debut=snap.child("debut").val();
+  var fin=snap.child("fin").val();
+
+  $("#table_body").append("<tr><th>"+ jour+"</th><th>"+debut+"</th><th>"+fin+"</th></tr>");
+
+});
+ 
+
+function addh() {
+          const jour=document.getElementById('jour');
+          const database=firebase.database();
+          const rootRef=database.ref('horaires');
+          rootRef.child(jour.value).set({
+            jour:document.getElementById('jour').value,
+            debut:document.getElementById('debut').value,
+           fin:document.getElementById('fin').value
+        });
+        }
         
         function reload_page(){
    window.location.reload();
@@ -583,59 +413,95 @@
               var etat_dispo = sna.val();  
               $("#nb_etud").append("<div>"+ etat_dispo+"</div>");
             }); 
-
    var nb_ch=firebase.database().ref('biblio/').child("nb_chaise");
       nb_ch.on('value', function(sna) {
               var etat_dispo = sna.val();  
               $("#nb_chaises").append("<div>"+ etat_dispo+"</div>");
+                 var knob=firebase.database().ref('biblio/').child("nb_etud_existe");
+    knob.on('value', function(sna) {
+         var etat_dispo1 = sna.val();  
+         $('.knob').trigger('configure', {
+                  'max': etat_dispo
+              });
+      $("#nbe").val(etat_dispo1).trigger('change');
+      $('#valeur').val(etat_dispo-etat_dispo1).trigger('change');
+    });
             });
-
        var doc=firebase.database().ref('biblio/').child("document");
       doc.on('value', function(sna) {
               var etat_dispo = sna.val();  
               $("#document").append("<div>"+ etat_dispo+"</div>");
             });
-
        var liv_emp=firebase.database().ref('biblio/').child("liv_emp");
       liv_emp.on('value', function(sna) {
               var etat_dispo = sna.val();  
               $("#liv_emp").append("<div>"+ etat_dispo+"</div>");
             });
-
       var temp=firebase.database().ref('biblio/').child("temp");
       temp.on('value', function(sna) {
               var etat_dispo = sna.val();  
-              $("#temp").append("<h3>"+ etat_dispo+" °"+"</h3>");
+      $("#temp").append("<h3>"+ etat_dispo+" °"+"</h3>");
             });
+
+ //         //  $(document).ready(function(){
+ //         // var test=60;
+ //         // $('input[type=text]').attr({value : test});
+ //         //        });
+
+  var test=firebase.database().ref().child("emprunte");
+  test.on("value", function(snapshot){
+          var nb=0;
+          var t=firebase.database().ref().child("emprunte");
+          t.on("child_added",snap => {
+             var id_emprunte=snap.child("emp_id").val();
+             var date=snap.child("date_retour").val();
+             var etat=snap.child("etat").val();
+             var d=new Date();
+             var j=d.getDate(); var m=d.getMonth()+1; 
+             if (j < 10) { 
+                 j = '0' + j; 
+                          } 
+                if (m < 10) { 
+                 m = '0' + m; 
+                  } 
+             var d1 = j+'/'+m+'/'+ d.getFullYear();
+            if ((date<d1)&&(etat=="notReturned")) {
+                  nb=nb+1;
+        $("#ida").append("<li class=\"nav-item\"><a class=\"dropdown-item\"> <span class=\"image\"><img src=\"images/img.jpg\" alt=\"Profile Image\" /></span><span> John Smith</span><span class=\"message\" >L'emprunte d'ID :  "+ id_emprunte +  "    <br> a dépassé la date de retour</span></a></li>");
+ }
+    
+});
+      
+             $("#number_msg").append("<span class=\"badge bg-green\">" + nb + "</span>");
+
+});
+
+          
           </script>
+        
   <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-  <script src="js/horaire.js"></script>
              <div class="col-md-12" id="etat">
              	  <div class="col-md-4">
                 <div class="x_panel">
                   <div class="x_title">
                     <h2>Places disponibles</h2>
+                    
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu" x-placement="bottom-start" style="position will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 30px, 0px);">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
+                     
+                      <li><a class="close-link" style="margin-left: 15px">
+                        <i class="fa fa-times" ></i></a>                   
+                           </li>
                     </ul>
+
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content" style="display: block;">
-                   
+
                     
-                      <input class="knob" data-width="200" data-height="200" data-displayPrevious=true data-fgColor="#26B99A" data-skin="tron" data-thickness=".2" value="20">
+   <input class="knob" data-width="200" data-height="200" data-displayPrevious=true data-fgColor="#26B99A" data-angleOffset=-125 data-angleArc=250 id="valeur" type="text"   data-rotation="anticlockwise" value="" readonly />
+    
                     </div>
                    
                     
@@ -650,60 +516,209 @@
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu" x-placement="bottom-start" style="position will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 30px, 0px);">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
+                
+                            <li><a class="close-link" style="margin-left: 15px">
+                              <i class="fa fa-times" ></i></a>              
+                                      </li>
                     </ul>
+
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content" style="display: block;">
                     
                      
-                       <input class="knob" data-width="200" data-height="200" data-angleOffset=-125 data-angleArc=250 data-fgColor="#e01a1a" data-rotation="anticlockwise" value="80">
-                 
-
-                    
-                   
-                    
-                    
+          <input class="knob" data-width="200" data-height="200" data-angleOffset=-125 data-angleArc=250 data-fgColor="#e01a1a"
+           data-rotation="anticlockwise" value="" id="nbe" readonly>
+          
                   </div>
                 </div>
               </div>
                 <!-- start of weather widget -->
-                <div class="col-md-4 col-sm-4 ">
+                <div >
+                        
                   <div class="x_panel">
                     <div class="x_title">
                       <h2>Temperature</h2>
-                      <ul class="nav navbar-right panel_toolbox">
-                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                        </li>
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="#">Settings 1</a>
-                              <a class="dropdown-item" href="#">Settings 2</a>
-                            </div>
-                        </li>
-                        <li><a class="close-link"><i class="fa fa-close"></i></a>
-                        </li>
-                      </ul>
+                    
                       <div class="clearfix"></div>
                     </div>
-                    <div class="x_content">
-                      
-                      <div class="col-sm-12">
+                  <div class="x_content">
+                      <div class="row">
+                          <div class="col-sm-12">
+
+
                         <div class="weather-text pull-right">
                           <h3  id="temp"></h3>
                         </div>
-                      </div>
+                     
+                            <div class="card-box table-responsive">
+                                       <div id="datatable-buttons_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap no-footer">
+                                        <table class="table table-striped table-bordered dataTable no-footer dtr-inline" role="grid" aria-describedby="datatable-buttons_info">
+                                        <div class="row">
+                  <div class="col-sm-6">
+                    <div class="mb-md">
+                      <button type="button" id="add_button" data-toggle="modal" data-target="#climatiseur" class="btn btn-info btn-sm"><i class="fa fa-plus" ></i></button>
+                    </div>
+                  </div>
+                </div>
+    <div id="climatiseur" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+     <div class="modal-dialog" role="document">
+       <form method="post" id="user_form" enctype="multipart/form-data">
+       <div class="modal-content">
+      <div class="modal-header">
+       <h4 class="modal-title" id="myModalLabel" >Ajouter un climatiseur</h4>
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+       <label>id-Climatiseur</label>
+       <input type="text" name="id_clim" id="id_clim" class="form-control"  />
+       <br />
+       <label>marque</label>
+       <input type="text" name="marq" id="marq" class="form-control"  />
+       <br />
+       <label>Emplacement</label>
+       <input type="text" name="empc" id="empc" class="form-control"  />
+        <br />
+           <label>Etat</label>
+           <br/>
+        <div class="radio">
+                            <label for="ouv"></label>
+                              <input type="radio" class="flat"  id="ouv" name="iCheck" > Ouvert
+                            
+                          </div>
+
+                          <br/>
+                          <div class="radio">
+                            <label for="ferm"></label>
+                              <input type="radio" class="flat" id="ferm" name="iCheck"> Ferme
+                            
+                          </div>
+     <div id="cond" class="desc">
+        
+      
+        <label>temperature</label>
+       <input type="text" name="tempera" id="tempera" class="form-control" />
+       <br />
+        <label>Mode</label>
+       <input type="text" name="mode" id="mode" class="form-control" />
+
+       <br />
+       </div>
+    
+
+      </div>
+     
+      <div class="modal-footer">
+       <input type="hidden" name="id_clim" id="id_clim" />
+   
+      
+
+        <button type="button"  data-dismiss="modal" class="btn btn-success" onclick="addt()">Add</button>
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+     </div></div></form></div></div>
+       
+
+      <script>
+
+    
+          
+ 
+
+var rootRef=firebase.database().ref().child("climatiseur");
+   rootRef.on("child_added",snap => {
+  var id_clim=snap.child("id_clim").val();
+  var emplace=snap.child("emplace").val();
+  
+  if (snap.child("etat").val()) {
+    var etat="Ouvert";
+  var mode=snap.child("mode").val();
+  var temp=snap.child("temp").val();
+}
+  else
+    { var etat="Ferme";}
+  var marq=snap.child("marque").val();
+  $("#table_tem").append("<tr><th>"+ id_clim+"</th><th>"+marq+"</th><th>"+emplace+"</th><th>"+etat+"<button id=\"add_button\" data-toggle=\"modal\" data-target=\"#cl\" class=\"btn btn-danger pull-right btn-sm\" ><i class=\"fa fa-edit\"></i></button></th><th>"+temp+"</th><th>"+ mode+"</th></tr>");
+});
+
+
+function addt() {
+          const id_clim=document.getElementById('id_clim');
+          const database=firebase.database();
+          const rootRef=database.ref('climatiseur');
+          rootRef.child(id_clim.value).set({
+            id_clim:document.getElementById('id_clim').value,
+            marque:document.getElementById('marq').value,
+            emplace:document.getElementById('empc').value,
+            temp:document.getElementById('tempera').value,
+            mode:document.getElementById('mode').value ,
+            etat:document.getElementById('ouv').checked})}
+function updatet() {
+          const id_clim=document.getElementById('id_clim');
+          const database=firebase.database();
+          const rootRef=database.ref('climatiseur');
+          etat:document.getElementById('ouvv').checked
+          const newData={etat}
+            rootRef.child(id_clim.value).update(newData);
+        }
+
+</script>
+        
+    
+     <div id="cl" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+     <div class="modal-dialog" role="document">
+       <form method="post" id="user_form" enctype="multipart/form-data">
+       <div class="modal-content">
+      <div class="modal-header">
+       <h4 class="modal-title" id="myModalLabel" >Modifier l'etat du climatiseur</h4>
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+           <label>Etat</label>
+           <br/>
+        <div class="radio">
+                            <label for="ouvv"></label>
+                              <input type="radio" class="flat"  id="ouvv" name="iCheck" > Ouvert
+                            
+                          </div>
+
+                          <br/>
+                          <div class="radio">
+                            <label for="ferm"></label>
+                              <input type="radio" class="flat" id="ferm" name="iCheck"> Ferme
+                            
+                          </div>
+     <div id="cond" class="desc">
+        
+      
+        <label>temperature</label>
+       <input type="text" name="tempera" id="t" class="form-control" />
+       <br />
+        <label>Mode</label>
+       <input type="text" name="mode" id="mode" class="form-control" />
+
+       <br />
+       </div>
+    
+
+      </div>
+     
+      <div class="modal-footer">
+      
+   
+      
+
+        <button type="button"  data-dismiss="modal" class="btn btn-success" onclick="updatet()">valider</button>
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+       </div></form></div></div>
+                            <thead>
+                        <tr role="row"><th >Climatiseur</th><th>Marque</th><th>Emplacement</th><th >Etat</th><th>Temperature</th><th>Mode</th></tr>
+                      </thead>
+                      <tbody id="table_tem">
+
+                     </tbody>
+                    </table>  
+                     
 
                      
                       </div>
@@ -713,7 +728,12 @@
                 
                 <!-- end of weather widget -->
 </div>
+                  </div></div></div></div></div></div>
+                  
+              
+                        
 <div class="col-md-6 col-sm-5 ">
+              <br><br> <br><br><br>
               <div class="x_panel tile">
                 <div class="x_title">
                   <h2>Satisfaction des etudiants</h2>
@@ -724,8 +744,7 @@
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
                       
                     </li>
-                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                    </li>
+<li><a class="close-link" style="margin-left: 15px"><i class="fa fa-times" ></i></a>                    </li>
                   </ul>
                   <div class="clearfix"></div>
                 </div>
@@ -813,7 +832,7 @@
               </div>
             </div>
 
-          </div>
+          
        
          <div class="col-md-12">
       <div class="x_panel">
@@ -822,15 +841,8 @@
                   <ul class="nav navbar-right panel_toolbox">
                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                     </li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">Settings 1</a>
-                          <a class="dropdown-item" href="#">Settings 2</a>
-                        </div>
-                    </li>
-                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                    </li>
+                   
+<li><a class="close-link" style="margin-left: 15px"><i class="fa fa-times" ></i></a>                    </li>
                   </ul>
                   <div class="clearfix"></div>
                 </div>
@@ -841,13 +853,7 @@
                 </div>
               </div>
      </div>
-    
- 
-
-               
-               
-                
-                
+         
                 
             </div>
         </div>
@@ -871,6 +877,8 @@
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+       <!-- Switchery -->
+    <script src="../vendors/switchery/dist/switchery.min.js"></script>
     <!-- FastClick -->
     <script src="../vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
@@ -942,6 +950,8 @@
     <script src="../vendors/raphael/raphael.min.js"></script>
     <script src="../vendors/morris.js/morris.min.js"></script>
 
+    
+
      <!-- Bootstrap Colorpicker -->
     <script src="../vendors/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
 	<script  type="text/javascript">
@@ -976,5 +986,7 @@
         $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
     });
 </script>
+
+
   </body>
 </html>

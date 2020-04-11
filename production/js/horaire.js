@@ -1,4 +1,5 @@
-var rootRef=firebase.database() .ref().child("horaires");
+
+var rootRef=firebase.database().ref().child("horaires");
 
    rootRef.on("child_added",snap => {
   var jour=snap.child("jour").val();

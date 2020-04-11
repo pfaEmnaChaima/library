@@ -7,15 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="images/favicon.ico" type="image/ico" />
-    <link href="css/font-awesome.min.css" rel="stylesheet">
 
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
 <link rel="stylesheet" type="text/css" href="">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
         <!-- TODO: Se passer de FontAwesome. -->
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <title>Smart Library </title>
 
     <!-- Bootstrap -->
@@ -91,6 +89,26 @@
                       <li><a href="index.php">Dashboard</a></li>
                       <li><a href="index2.html">Dashboard2</a></li>
                       <li><a href="index3.html">Dashboard3</a></li>
+                    </ul>
+                  </li>
+  <li><a><i class="fa fa-edit"></i> Bibliotheque <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a><strong>Salle de Lecture</strong> <i class="fa fa-plus"></i></a>
+                      <ul id="fct" class="nav child_menu">
+                      <li><a href="index.php#etat">Etat</a></li>
+                      <li><a href="index.php#calendrier">Regles</a></li>
+
+                    </ul>
+                  </li>
+                      <li><a><strong>Librairie</strong> <i class="fa fa-plus"></i></a>
+                      <ul id="fct" class="nav child_menu">
+                      <li><a href="document.php">Documents</a></li>
+                      <li><a href="livre_emprunte.php">Empruntes</a></li>
+
+                 
+                    </ul>
+                  </li>
+                      
                     </ul>
                   </li>
                   <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
@@ -189,69 +207,16 @@
                   </div>
                 </li>
 
-                <li role="presentation" class="nav-item dropdown open">
+         <li role="presentation" class="nav-item dropdown open">
                   <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown" aria-expanded="false">
-                    <i class="fa fa-envelope-o"></i>
-                    <span class="badge bg-green">6</span>
+                    <i class="fa big-icon fa-envelope icon-wrap" ></i>
+                    <span  id="number_msg" > </span>
                   </a>
-                  <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
-                    <li class="nav-item">
-                      <a class="dropdown-item">
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="dropdown-item">
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="dropdown-item">
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="dropdown-item">
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <div class="text-center">
-                        <a class="dropdown-item">
-                          <strong>See All Alerts</strong>
-                          <i class="fa fa-angle-right"></i>
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
+                  <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1" id="ida">   
+                  <li>
+                    
+                  </li>   
+                </ul>
                 </li>
               </ul>
             </nav>
@@ -264,30 +229,30 @@
           <!-- top tiles -->
           <div class="row" style="display: inline-block;" >
           <div class="tile_count"style="width: 1200px;">
-            <div class="col-md-3 col-sm-5  tile_stats_count" style="padding-left: 50px padding-right: 50px;">
-              <span class="count_top"><i class="fa fa-user"style="margin-right: 10px;"></i>Nombre d'etudiants </span>
+   <div class="col-md-3 col-sm-5  tile_stats_count" style="padding-left: 50px padding-right: 50px;">
+              <span class="count_top"><i class="fa fa-user" aria-hidden="true" style="margin-right: 5px;"></i>Nombre d'etudiants </span>
               <div class="count" id="nb_etud"></div>
                 <button type="button" class="btn btn-success btn-xs"><a href="contacts.html" style="color: white;">modifier</a><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="padding-left: 10px;"></span></button>
             </div>
             
             
            
-            <div class="col-md-3 col-sm-5  tile_stats_count" style="padding-left: 50px padding-right: 50px;">
-              <span class="count_top"><i class='fa fa-chair' style="margin-right: 10px;"></i> Nombre de chaises</span>
+            <div class="col-md-3 col-sm-3  tile_stats_count" style="padding-left: 50px padding-right: 50px;">
+              <span class="count_top"><i class="fas fa-chair"  style="margin-right: 3px;"></i> Nombre de chaises</span>
               <div class="count" id="nb_chaises"></div>
               <button type="button" class="btn btn-info">modifier<span class="glyphicon glyphicon-pencil" aria-hidden="true"style="padding-left: 10px;"></span></button>
               
             </div>
              <div class="col-md-3 col-sm-3  tile_stats_count" style="padding-left: 50px padding-right: 50px;">
-              <span class="count_top"><i class="fa fa-book" aria-hidden="true" style="margin-right: 10px;"></i>Documents </span>
+              <span class="count_top"><i class="fa fa-book"style="margin-right: 5px;" ></i>Documents </span>
               <div class="count" id="document"></div>
                 <button type="button" class="btn btn-success btn-xs"><a href="document.php" style="color: white;">plus d'infos</a><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="padding-left: 10px;"></span></button>
             </div>
 
             <div class="col-md-3 col-sm-3  tile_stats_count" style="padding-left: 50px padding-right: 50px;">
-              <span class="count_top"><i class="fa fa-book" aria-hidden="true" style="margin-right: 10px;"></i>Livre Emprunte </span>
+              <span class="count_top"><i class="fa fa-book"style="margin-right: 5px;"></i>Livre Emprunte </span>
               <div class="count" id="liv_emp"></div>
-                <button type="button" class="btn btn-success btn-xs"><a href="livre_emprunte.php" style="color: white;">Add</a><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="padding-left: 10px;"></span></button>
+                <button type="button" class="btn btn-info"><a href="livre_emprunte.php" style="color: white;">Add</a><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="padding-left: 10px;"></span></button>
             </div>
              </div>
           </div>
@@ -298,15 +263,8 @@
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Settings 1</a>
-                            <a class="dropdown-item" href="#">Settings 2</a>
-                          </div>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
+                   
+<li><a class="close-link" style="margin-left: 15px"><i class="fa fa-times" ></i></a>                      </li>
                     </ul>
                     <div class="clearfix"></div>
                   </div>
@@ -315,13 +273,13 @@
                           <div class="col-sm-12">
                           <div class="card-box table-responsive">
                           <div id="datatable-buttons_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap no-footer">
-                            <table id="datatable-buttons" class="table table-striped table-bordered dataTable no-footer dtr-inline" style="width: 100%;" role="grid" aria-describedby="datatable-buttons_info">
+                  <table id="datatable-buttons" class="table table-striped table-bordered dataTable no-footer dtr-inline" style="width: 100%;" role="grid" aria-describedby="datatable-buttons_info">
                                         <div class="row">
                   <div class="col-sm-6">
                     <div class="mb-md">
-                      <button type="button" id="add_button" data-toggle="modal" data-target="#userModal" class="btn btn-info btn-lg">Ajouter<i class="fa fa-plus" style="padding-left: 20px;"></i></button>
+                      <button type="button" id="add_button" data-toggle="modal" data-target="#userModal" class="btn btn-info btn-lg"><i class="fa fa-plus" style="margin-right: 10px;" ></i>Ajouter</button>
 
-                      <button type="button" id="add_button" data-toggle="modal" data-target="#userModalReturn" class="btn btn-info btn-lg">Return<i class="fa fa-plus" style="padding-left: 20px;"></i></button>
+                      <button type="button" id="add_button" data-toggle="modal" data-target="#userModalReturn"  class="btn btn-secondary btn-lg btn-danger"><i class="fas fa-minus" style="margin-right: 10px;" ></i>Return</button>
                     </div>
                   </div>
                 </div>
@@ -343,9 +301,7 @@
         <label>nom-Livre</label>
        <input type="text" name="quantite" id="nom_livre" class="form-control" />
        <br />
-        <label>domaine</label>
-       <input type="text" name="quantite" id="domaine" class="form-control" />
-       <br />
+        
              
        
        
@@ -396,218 +352,7 @@
        </div>
      </div>
       </div>
-      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-       <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase.js"></script>
-
-      <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-database.js"></script>
-
-      <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-              apiKey: "AIzaSyBiUHy07aEruI_ZgBmg-A8ez6bBc-W1gtw",
-              authDomain: "smart-library1.firebaseapp.com",
-              databaseURL: "https://smart-library1.firebaseio.com",
-              projectId: "smart-library1",
-              storageBucket: "smart-library1.appspot.com",
-              messagingSenderId: "215824460430",
-              appId: "1:215824460430:web:6d9b13ab3c7629b377b7df",
-              measurementId: "G-BC9C4EV24W"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        
-        function reload_page(){
-   window.location.reload();
-  }
- var nb_etud=firebase.database().ref('biblio/').child("nb_etud");
-      nb_etud.on('value', function(sna) {
-              var etat_dispo = sna.val();  
-              $("#nb_etud").append("<div>"+ etat_dispo+"</div>");
-            }); 
-
-   var nb_ch=firebase.database().ref('biblio/').child("nb_chaise");
-      nb_ch.on('value', function(sna) {
-              var etat_dispo = sna.val();  
-              $("#nb_chaises").append("<div>"+ etat_dispo+"</div>");
-            });
-
-       var doc=firebase.database().ref('biblio/').child("document");
-      doc.on('value', function(sna) {
-              var etat_dispo = sna.val();  
-              $("#document").append("<div>"+ etat_dispo+"</div>");
-            });
-
-       var liv_emp=firebase.database().ref('biblio/').child("liv_emp");
-      liv_emp.on('value', function(sna) {
-              var etat_dispo = sna.val();  
-              $("#liv_emp").append("<div>"+ etat_dispo+"</div>");
-            });
-
-function update() {
-  var id_livre= document.getElementById('idl').value;
-  var id_etudiant=document.getElementById('ide').value;
-  const empd=document.getElementById('idemp').value;
-  const database=firebase.database();
-  var stockage = firebase.database().ref().child('stockage');
-  var etudiant = firebase.database().ref().child('etudiants');
-
-  var e=firebase.database().ref().child('emprunte/');
-
-  e.on('child_added',function(snapshot){
-    id=snapshot.key;
-    if(id==empd){
-      var ch=firebase.database().ref('emprunte/' + empd).child("etat");
-      var etat;
-      ch.on('value', function(sna) {
-              var etat_dispo = sna.val();  
-              etat=etat_dispo;}); 
-            console.log(etat) ;
-        if(etat!="Returned"){      
-      etudiant.orderByChild('id').equalTo(id_etudiant).on('child_added', function(snap) {
-          var reff=firebase.database().ref('etudiants/' + id_etudiant).child("nb_emp");
-          var b;        var a;
-          reff.on('value', function(snaps) {
-                var nbemp = snaps.val();
-                b=nbemp+1});
-
-          stockage.orderByChild('id').equalTo(id_livre).on('child_added', function(snap) {
-          var ref=firebase.database().ref('stockage/' + id_livre).child("Qte");
-          ref.on('value', function(snapshot) {
-              var uid = snapshot.val();          
-              a=uid+1;
-                });
-
-                                console.log(id);
-                              etat="Returned";
-                              path='emprunte/'+ empd;
-                                
-                                const newData ={ etat
-                                  }
-
-                                database.ref(path).update(newData);
-
-                               var data = {Qte: a  }
-                                path='stockage/'+ id_livre;
-                                firebase.database().ref(path).update(data);
-
-                                    var datanew = { nb_emp: b }
-                                    path='etudiants/'+ id_etudiant;
-                                      firebase.database().ref(path).update(datanew);
-                                      reload_page();
-                           });
-   });
-        } 
-        else {
-          Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: "le livre est retourne",
-                        });
-        }
-      } });
-       }
-   
-function add(){
-
-var d=new Date();
-          var d1=new Date();
-          var d2=d1.addDays(14);
-         var date_emp = d.getDate()+'/'+(d.getMonth()+1)+'/'+d.getFullYear();
-         var date_ret = d2.getDate()+'/'+(d2.getMonth()+1)+'/'+d2.getFullYear();
-
-  var id_livre= document.getElementById('id_liv').value;
-  var id_etudiant=document.getElementById('id_emp').value;
-  var stockage = firebase.database().ref().child('stockage');
-  var etudiant = firebase.database().ref().child('etudiants');
-    var ok=false;
-
-
-
-    etudiant.orderByChild('id').equalTo(id_etudiant).on('child_added', function(snap) {
-      var reff=firebase.database().ref('etudiants/' + id_etudiant).child("nb_emp");
-          var b;
-          reff.on('value', function(snaps) {
-              var nbemp = snaps.val();
-              b=nbemp});
-            if(b==0)  {
-                   Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: "le nombre de possibilite etudiants egale 0",
-                        });}
-            else if((b==1)||(b==2)){
-                b=b-1;
-                ok=true;
-            }
-            
-
-      if(ok==true){
-      stockage.orderByChild('id').equalTo(id_livre).on('child_added', function(snap) {
-          var ref=firebase.database().ref('stockage/' + id_livre).child("Qte");
-          var a;
-          ref.on('value', function(snapshot) {
-              var uid = snapshot.val();          
-              a=uid;
-                });
-             if(a==1){
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: "le nombre de livres disponibles egale à 1",
-                        });
-              }
-
-
-            else  if(a>1){
-                a=a-1;
-
-                var ud = firebase.database().ref().child('emprunte').push().key;
-   
-              var daata = {
-            emp_id:ud,
-            id_livre:document.getElementById('id_liv').value,
-            id_emprunteur:document.getElementById('id_emp').value,
-            date_emp:date_emp,
-            date_retour:date_ret,
-            nom_livre:document.getElementById('nom_livre').value,
-            domaine:document.getElementById('domaine').value,
-            etat:"notReturned"  }
-   
-                var updatess = {};
-                      updatess['/emprunte/' + ud] = daata;
-                          firebase.database().ref().update(updatess);
-   
-  
-              
-              
-             console.log(a);
-
-                var data = { Qte : a  }
-                  path='stockage/'+ id_livre;
-               firebase.database().ref(path).update(data);
-
-            var datanew = { nb_emp: b }
-                  path='etudiants/'+ id_etudiant;
-               firebase.database().ref(path).update(datanew);}
-
-           });
-  }
-
-
-  });
-           }
-
-
- function reload_page(){
-   window.location.reload();
-  }
-
-</script>
-
-  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-  <script src="js/emprunte.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
       
       <thead >
@@ -657,6 +402,98 @@ var d=new Date();
         <!-- /footer content -->
       </div>
     </div>
+
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+       <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase.js"></script>
+
+      <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-database.js"></script>
+
+      <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+              apiKey: "AIzaSyBiUHy07aEruI_ZgBmg-A8ez6bBc-W1gtw",
+              authDomain: "smart-library1.firebaseapp.com",
+              databaseURL: "https://smart-library1.firebaseio.com",
+              projectId: "smart-library1",
+              storageBucket: "smart-library1.appspot.com",
+              messagingSenderId: "215824460430",
+              appId: "1:215824460430:web:6d9b13ab3c7629b377b7df",
+              measurementId: "G-BC9C4EV24W"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        
+
+ var nb_etud=firebase.database().ref('biblio/').child("nb_etud");
+      nb_etud.on('value', function(sna) {
+              var etat_dispo = sna.val();  
+              $("#nb_etud").append("<div>"+ etat_dispo+"</div>");
+            }); 
+
+   var nb_ch=firebase.database().ref('biblio/').child("nb_chaise");
+      nb_ch.on('value', function(sna) {
+              var etat_dispo = sna.val();  
+              $("#nb_chaises").append("<div>"+ etat_dispo+"</div>");
+            });
+
+       var doc=firebase.database().ref('biblio/').child("document");
+      doc.on('value', function(sna) {
+              var etat_dispo = sna.val();  
+              $("#document").append("<div>"+ etat_dispo+"</div>");
+            });
+
+       var liv_emp=firebase.database().ref('biblio/').child("liv_emp");
+      liv_emp.on('value', function(sna) {
+              var etat_dispo = sna.val();  
+              $("#liv_emp").append("<div>"+ etat_dispo+"</div>");
+            });
+
+      var dateRetour=firebase.database().ref().child("emprunte");
+      dateRetour.on("child_added",snap => {
+            var date_retour=snap.child("date_retour").val();
+            var etat=snap.child("etat").val();
+            var d=new Date();
+            var d1=d.getDate()+'/'+(d.getMonth()+1)+'/'+d.getFullYear();
+              if ((d1<=date_retour) && (etat=="notReturned")) 
+                $("#id_msg").append("<span>"+ "Livre n'est pas encore retournee"+"</span>");
+
+            });
+
+      var test=firebase.database().ref().child("emprunte");
+  test.on("value", function(snapshot){
+          var nb=0;
+          var t=firebase.database().ref().child("emprunte");
+          t.on("child_added",snap => {
+             var id_emprunte=snap.child("emp_id").val();
+             var date=snap.child("date_retour").val();
+             var etat=snap.child("etat").val();
+             var d=new Date();
+             var j=d.getDate(); var m=d.getMonth()+1; 
+             if (j < 10) { 
+                 j = '0' + j; 
+                          } 
+                if (m < 10) { 
+                 m = '0' + m; 
+                  } 
+             var d1 = j+'/'+m+'/'+ d.getFullYear();
+            if ((date<d1)&&(etat=="notReturned")) {
+                  nb=nb+1;
+        $("#ida").append("<li class=\"nav-item\"><a class=\"dropdown-item\"> <span class=\"image\"><img src=\"images/img.jpg\" alt=\"Profile Image\" /></span><span>John Smith</span><span class=\"message\" >L'emprunte d'ID :  "+ id_emprunte +  "  a dépassé la date de retour</span></a></li>");
+ }
+    
+});
+      
+             $("#number_msg").append("<span class=\"badge bg-green\">" + nb + "</span>");
+
+});
+      
+</script>
+
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script src="js/emprunt.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
 
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>

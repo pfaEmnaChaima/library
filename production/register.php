@@ -8,6 +8,7 @@
 	
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/mainn.css">
