@@ -216,7 +216,7 @@
 
                 <li role="presentation" class="nav-item dropdown open">
                   <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown" aria-expanded="false">
-                    <i class="fa big-icon fa-envelope icon-wrap" ></i>
+      <i class="fa fa-bell-o icon-wrap"></i>
                     <span  id="number_msg" > </span>
                   </a>
                   <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1" id="ida">   
